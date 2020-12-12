@@ -1,64 +1,114 @@
-import Head from 'next/head'
-import styles from '../styles/Home.module.css'
+import Head from 'next/head';
+import Link from 'next/link';
+import Image from 'next/image';
+import styles from '../styles/Home.module.css';
 
-export default function Home() {
+export default function MainPage() {
   return (
     <div className={styles.container}>
       <Head>
-        <title>Create Next App</title>
+        <title>Mindfish</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main className={styles.main}>
-        <h1 className={styles.title}>
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
-        </h1>
+        <nav className={styles.navigation}>
+          <a>MindFish</a>
+          <ul>
+            <li><Link href="/"><a>Beranda</a></Link></li>
+            <li><Link href="/stok"><a>Stok</a></Link></li>
+            <li><Link href="/member"><a>Member</a></Link></li>
+            <li><Link href="/sertifikasi"><a>Sertifikasi</a></Link></li>
+            <li><Link href="/login"><a>Login</a></Link></li>
 
-        <p className={styles.description}>
-          Get started by editing{' '}
-          <code className={styles.code}>pages/index.js</code>
-        </p>
+          </ul>
+        </nav>
+
+      <main className={styles.main}>
+
+        <div className={styles.title}>
+          <Image  src='/KJA.jpg'  
+                  alt="Picture of the author"
+                  width={480}
+                  height={270}
+          ></Image>
+          <div className={styles.bannerCard}>
+            <h2>Mindfish</h2>
+            <h4>Membawa Kebermanfaatan Bagi Pembudidaya</h4>
+            <h4>Untuk Rakyat dan Bangsa</h4>
+          </div>
+          
+        </div>
+        
 
         <div className={styles.grid}>
-          <a href="https://nextjs.org/docs" className={styles.card}>
-            <h3>Documentation &rarr;</h3>
-            <p>Find in-depth information about Next.js features and API.</p>
+          <a className={styles.card}>
+            <Image  src='/stats.svg'  
+                    alt="Status Function"
+                    width={100}
+                    height={100}
+            ></Image>
+            <h3>Profit Jangka Panjang</h3>
+          </a>
+          <a className={styles.card}>
+            <Image  src='/safe.svg'  
+                    alt="Status Function"
+                    width={100}
+                    height={100}
+            ></Image>
+            <h3>Aman Terpercaya</h3>
+          </a>
+          <a className={styles.card}>
+            <Image  src='/clock.svg'  
+                    alt="Status Function"
+                    width={100}
+                    height={100}
+            ></Image>
+            <h3>Mudah dan Cepat</h3>
+          </a>
+          <a className={styles.card}>
+            <Image  src='/support.svg'  
+                    alt="Status Function"
+                    width={100}
+                    height={100}
+            ></Image>
+            <h3>Pelayanan Bersahabat</h3>
+          </a>
+        </div>
+
+        <div className={styles.grid}>
+          <a className={styles.card}>
+            <Image  src='/member.svg'  
+                    alt="Status Function"
+                    width={100}
+                    height={100}
+            ></Image>
+            <h3>8 Member</h3>
+            <p>Jumlah member yang terdaftar dan aktif berbudidaya ikan</p>
           </a>
 
-          <a href="https://nextjs.org/learn" className={styles.card}>
-            <h3>Learn &rarr;</h3>
-            <p>Learn about Next.js in an interactive course with quizzes!</p>
+          <a className={styles.card}>
+            <Image  src='/location.svg'  
+                    alt="Status Function"
+                    width={100}
+                    height={100}
+            ></Image>
+            <h3>4 Kabupaten</h3>
+            <p>Layanan tersedia di berbagai kabupaten yang ada di jawa barat</p>
           </a>
-
-          <a
-            href="https://github.com/vercel/next.js/tree/master/examples"
-            className={styles.card}
-          >
-            <h3>Examples &rarr;</h3>
-            <p>Discover and deploy boilerplate example Next.js projects.</p>
-          </a>
-
-          <a
-            href="https://vercel.com/import?filter=next.js&utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-          >
-            <h3>Deploy &rarr;</h3>
-            <p>
-              Instantly deploy your Next.js site to a public URL with Vercel.
-            </p>
+          <a className={styles.card}>
+            <Image  src='/money.svg'  
+                    alt="Status Function"
+                    width={100}
+                    height={100}
+            ></Image>
+            <h3>Rp. 20.000.000 profit</h3>
+            <p>Jumlah profit yang telah dihasilkan dari budidaya ikan member</p>
           </a>
         </div>
       </main>
 
       <footer className={styles.footer}>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{' '}
-          <img src="/vercel.svg" alt="Vercel Logo" className={styles.logo} />
-        </a>
+       Mindfish
       </footer>
     </div>
   )
